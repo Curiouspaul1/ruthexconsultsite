@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+    <title>Ruthex Consult</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+            </div>
+            
+            <div class="navbar">
+                <span>About us</span>
+                <span>Contact us</span>
+                <span>Clients</span>
+                <span id="sign-up">Sign Up</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="intro">
+                <div class="intro-text">
+                    <h1>Main Text Here!</h1>
+                    <br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam illo voluptate quia odit iure qui blanditiis itaque cum. Quisquam, nesciunt ipsum saepe error explicabo nulla delectus perspiciatis beatae fuga aliquid? At nisi nam distinctio error repellat vero quos veniam repellendus, eligendi, quisquam vitae dolorum. Enim molestias id voluptate voluptates.
+                    <br><br>
+                    <button id="learn-btn">Learn More</button>
+                </div>
+                <div class="intro-image">
+                    <img src="{{url_for('static', filename='img/main-img1.png')}}" alt="">
+                </div>
+            </div>
+        </main>
+
+        <section class="about">
+            <div class="about-header">
+                <h2>About Us</h2>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A non sed nisi nemo in repudiandae exercitationem, neque incidunt vero ex, voluptas fugiat, optio cumque deleniti beatae maiores aperiam eos amet!
+                </p>
+
+                <div class="subscribe">
+                    <p> Join the tribe, subscribe to my newsletter</p>
+                    <input type="text" placeholder="example@email.com">
+                    <br>
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients">
+            <div class="client-header">
+                <h2>See what my clients have to say</h2>
+            </div>
+            <div class="ul"></div>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                        </p>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                        </p>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                        </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"></script>
+            <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
+            <!-- <div class="clients-main">
+                <div class="client-item" id="lastClone">
+                    <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                    </p>
+                </div>
+                <div class="client-item" id="b">
+                    <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                    </p>
+                </div>
+                <div class="client-item" id="firstClone">
+                    <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                    </p>
+                </div>
+            </div> -->
+        </section>
+
+        <section>
+            <div class="client-header">
+                <h2>Get in touch</h2>
+            </div>
+            <div class="ul contact-ul"></div>
+            <div class="contact">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Fill up the form and our team will get back to you within 24hours</p>
+                    <div class="contact-item">
+                        <img src="{{url_for('static', filename='img/call-outline.svg')}}" alt="">
+                        +2348054079204
+                    </div>
+                    <div class="contact-item">
+                        <img src="{{url_for('static', filename='img/mail-outline.svg')}}" alt="">
+                        Ruthexconsult@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <img src="{{url_for('static', filename='img/logo-facebook.svg')}}" alt="">
+                        Ruthexconsult
+                    </div>
+                    <div class="contact-item">
+                        <img src="{{url_for('static', filename='img/logo-instagram.svg')}}" alt="">
+                        @ruthexconsult
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="">
+                        <div class="contact-fields">
+                            <div class="name">
+                                <input type="text" placeholder="First Name">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                            <div class="contact-details">
+                                <input type="text" placeholder="Email Address">
+                                <input type="text" placeholder="Telephone">
+                            </div>
+                        </div>
+                        <div class="help-needed">
+                            <input type="radio" id="r1" value="consultancy" name="help-needed">
+                            <label for="r1">Consultancy</label>
+                            <input type="radio" id="r2" value="upscaling" name="help-needed">
+                            <label for="r2">Business Consultancy</label>
+                            <input type="radio" id="r3" value="ads" name="help-needed">
+                            <label for="r3">Boost earnings with ads</label>
+                        </div>
+                        <div class="message">
+                            <label for="message">Leave a message for us..</label>
+                            <textarea name="" id="message" cols="30" rows="5"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
