@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #EAF6FF;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color:#232528;
+}
+
+.container {
+    width:80%;
+    margin:0 auto;
+}
+
+header {
+    margin-top:2rem;
+    font-weight: 400;
+}
+
+.head-text h1 {
+    color:#232528;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.head-text {
+    font-size: larger;
+    line-height: 1.5;
+}
+
+.courses {
+    display:flex;
+    flex-direction: column;
+    margin-top:2rem;
+}
+
+.courses div:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.course-item {
+    display:grid;
+    grid-template-columns: 20% 80%;
+    gap:2rem;
+    background-color: #fff;
+    padding:0 5px;
+    border:1px solid #eee;
+    border-radius: 10px;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    border:none;
+    margin-top:2rem;
+    padding-left: 1rem;
+}
+
+.thumbnail img{
+    width: 200px;
+    height: 200px;
+}
+
+.desc {
+    padding: 10px;
+    font-size: larger;
+    margin-top:1rem;
+}
+
+.desc h3 {
+    color: #2A2A72;
+    margin-bottom: 1rem;
+}
+
+
+.desc button a{
+    text-decoration: none;
+    font-size: larger;
+    color:#EAF6FF;
+}
+
+.desc button {
+    background-color: #232528;
+    padding: 8px;
+    border: none;
+    transition: ease-in-out 0.3s;
+}
+
+.desc button:hover{
+    background-color: #EAF6FF;
+    cursor: pointer;
+}
+
+.desc a:hover {
+    color:#2A2A72;
+}
+
+.desc-graph{
+    margin-top:5px;
+    margin-bottom: 7px;
+}
+
+footer {
+    margin-top:5rem;
+    background-color: #232528;
+    padding:3%;
+    color:#EAF6FF;
+    font-size: larger;
+    text-align: center;
+}

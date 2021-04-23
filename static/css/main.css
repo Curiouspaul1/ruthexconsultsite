@@ -4,6 +4,10 @@
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #EAF6FF;
     color:#000000;
@@ -32,8 +36,13 @@ body {
 }
 
 .navbar {
-    font-weight: lighter;
+    font-weight: 300;
     font-size: larger;
+}
+
+.navbar a {
+    text-decoration: none;
+    color:#232528;
 }
 
 .navbar span {
@@ -43,24 +52,28 @@ body {
 
 .navbar #sign-up {
     padding:10px 12px;
-    border:#2A2A72 2px solid;
-    font-size: large;
+    font-size: larger;
     font-weight: light;
+}
+
+.navbar #sign-up a{
+    color: #FFA400;
 }
 
 .navbar span:hover {
     cursor:pointer;
     color: #2A2A72;
+    font-weight: 400;
 }
 
-.navbar #sign-up:hover {
-    background: #2A2A72;
-    color:#EAF6FF;
-    transform: scale(2);
+.navbar #sign-up a:hover {
+    color:#2A2A72;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .logo img{
+    transform:scale(1.1);
     transition: ease-in-out 0.3s;
 }
 
@@ -79,7 +92,7 @@ main {
 
 .intro-text {
     margin-top: 5rem;
-    font-size: x-large;
+    font-size: xx-large;
     letter-spacing: 2px;
 }
 
@@ -124,7 +137,7 @@ main {
 }
 
 .about-text {
-    font-size: larger;
+    font-size: x-large;
 }
 
 .subscribe input{
@@ -157,6 +170,18 @@ main {
     margin-top: 2rem;
     font-size: larger;
     color: #2A2A72;
+}
+
+.flash-message {
+    width: 40vw;
+    padding: 10px;
+    border: 2px solid #2e7444;
+    border-radius: 5px;
+    color:#232528;
+    font-size: larger;
+    background-color: #66eb90;
+    margin-top:2rem;
+    text-align: center;
 }
 
 .clients {
@@ -265,6 +290,14 @@ main {
     color:#2A2A72;
 }
 
+#contact-section {
+    margin-top:5rem;
+}
+
+.contact-form {
+    padding-bottom:2rem;
+}
+
 .contact-form button {
     padding: 20px 40px;
     font-size: large;
@@ -305,9 +338,164 @@ main {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    margin-bottom:2rem;
+    margin-right:-6rem;
 }
 
 .glide__slide p{
     width: 60%;
     margin: 0 auto;
+}
+
+footer {
+    margin-top:5rem;
+    background-color: #2A2A72;
+    padding:3%;
+    color:#EAF6FF;
+    font-size: larger;
+    text-align: center;
+}
+
+.mobile-navbar{
+    display: none;
+}
+
+
+@media (max-width:414px){
+    .navbar{
+        display:none;
+    }
+
+    .header {
+        display:flex;
+    }
+
+    .header .logo img {
+        margin-top:-1rem;
+        margin-left: 8rem;
+        transform: scale(0.68);
+    }
+
+    .mobile-navbar {
+        display:block;
+        position: absolute;
+        z-index: 10 !important;
+    }
+
+    .mobile-navbar .menu-items {
+        display:flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        padding: 5rem;
+        height:100vh;
+    }
+
+    .menu-items a {
+        text-decoration: none;
+        color: #EAF6FF;
+        font-weight: 300;
+    }
+
+    .menu-items span:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    #ham_btn {
+        width: 40px;
+        height:40px;
+    }
+
+    .nav-active #ham_btn {
+        display:none;
+    }
+
+    .nav-active .menu-items {
+        font-size: larger;
+        background-color: #2A2A72;
+        transform: translateX(5%);
+        transition-property: transform;
+	    transition:0.8s ease-in-out;
+    }
+
+    .nav-active {
+        margin-left:-3rem;
+    }
+
+    main {
+        margin-top:2rem;
+    }
+
+    .intro {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .intro-text {
+        font-size: x-large;
+    }
+
+    .intro-text h1{
+        font-size:larger;
+    }
+
+    .intro-image {
+        display:none;
+    }
+
+    #learn-btn {
+        font-size: 16px;
+        padding:14px 20px;
+    }
+
+    .about {
+        margin-top:2rem;
+    }
+
+    .about-header h2 {
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        font-size:larger;
+    }
+
+    .subscribe input {
+        width:50vw;
+        padding:15px 20px;
+    }
+
+    .subscribe button {
+        padding:8px 10px;
+        font-size: large;
+    }
+
+    .subscribe p {
+        font-size: large;
+    }
+
+    .flash-message {
+        font-size: large;
+    }
+
+    .clients {
+        margin-top:3rem;
+    }
+
+    .client-header h2 {
+        font-size: larger;
+    }
+
+    .contact {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .contact-form button {
+        padding:15px 20px;
+        margin-left:2%;
+    }
+
+    footer {
+        font-size: medium;
+    }
 }

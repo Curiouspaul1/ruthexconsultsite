@@ -19,19 +19,33 @@
             </div>
             
             <div class="navbar">
-                <span>About us</span>
-                <span>Contact us</span>
-                <span>Clients</span>
-                <span id="sign-up">Sign Up</span>
+                <span><a href="#about">About us</a></span>
+                <span><a href="#contact-section">Contact us</a></span>
+                <span><a href="#clients">Clients</a></span>
+                <span id="sign-up"><a href="{{url_for('courses')}}">Enroll</a></span>
             </div>
+
+            <div class="mobile-navbar" id="mob-nav">
+                <div>
+                    <img id="ham_btn" src="{{url_for('static', filename='img/menu.svg')}}" alt="">
+                </div>
+                <div class="menu-items">
+                    <span><a href="#about">About us</a></span>
+                    <span><a href="#contact-section">Contact us</a></span>
+                    <span><a href="#clients">Clients</a></span>
+                    <span id="sign-up"><a href="{{url_for('courses')}}">Enroll</a></span>
+                </div>
+            </div>
+
         </header>
 
         <main>
             <div class="intro">
                 <div class="intro-text">
-                    <h1>Main Text Here!</h1>
+                    <h1>Welcome!</h1>
                     <br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam illo voluptate quia odit iure qui blanditiis itaque cum. Quisquam, nesciunt ipsum saepe error explicabo nulla delectus perspiciatis beatae fuga aliquid? At nisi nam distinctio error repellat vero quos veniam repellendus, eligendi, quisquam vitae dolorum. Enim molestias id voluptate voluptates.
+                    Need help to start & scale your business? You’re in the right place!
+                    Let's work together to help you achieve massive results you will be proud of!
                     <br><br>
                     <button id="learn-btn">Learn More</button>
                 </div>
@@ -41,26 +55,37 @@
             </div>
         </main>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="about-header">
-                <h2>About Us</h2>
+                <h2>About Me</h2>
             </div>
 
             <div class="about-text">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A non sed nisi nemo in repudiandae exercitationem, neque incidunt vero ex, voluptas fugiat, optio cumque deleniti beatae maiores aperiam eos amet!
+                    I’m Asalu Ruth also known as Ruthex Consult, the startup specialist.
+                    I help business owners who are struggling with business growth, grow their businesses with proven marketing and sales strategies to increase their sales revenue, visibility and grow sustainable businesses.
                 </p>
-
-                <div class="subscribe">
-                    <p> Join the tribe, subscribe to my newsletter</p>
-                    <input type="text" placeholder="example@email.com">
-                    <br>
-                    <button type="submit">Subscribe</button>
-                </div>
+                <form action="add_subscriber" method="POST">
+                    <div class="subscribe">
+                        <p> Join the tribe, subscribe to get weekly business tips</p>
+                        <input type="text" placeholder="example@email.com" name="email">
+                        <br>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="flash-message">
+                                <p>{{message}}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
             </div>
         </section>
 
-        <section class="clients">
+        <section class="clients" id="clients">
             <div class="client-header">
                 <h2>See what my clients have to say</h2>
             </div>
@@ -70,20 +95,23 @@
                   <ul class="glide__slides">
                     <li class="glide__slide">
                         <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                        <strong>Bam's Empire</strong>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                            I saw a difference within days. I now have a better relationship with my customers. I mean, I've been able to retain more of them. My sales has really improved. In two days,I've made over 15,000 which is really a first for me.
                         </p>
                     </li>
                     <li class="glide__slide">
                         <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                        <strong>Tee giftery store</strong>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                            I had a lot of positive results on social media since the videos and I had absolutely no difficulty implementing.
                         </p>
                     </li>
                     <li class="glide__slide">
                         <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
+                        <strong>Deborah MYS</strong>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque dignissimos et maxime doloribus consequuntur fuga inventore ipsam veniam, repellat nulla officia exercitationem possimus dolore iste reprehenderit vero minus! Consectetur in
+                            Implementing the urgency method you taught in the videos was really worth it. It made aspects of my business that were previously difficult,seem easier.
                         </p>
                     </li>
                   </ul>
@@ -95,7 +123,7 @@
                 </div>
             </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"></script>
-            <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
+            <!-- <script src="{{url_for('static', filename='scripts/main.js')}}"></script> -->
             <!-- <div class="clients-main">
                 <div class="client-item" id="lastClone">
                     <img src="{{url_for('static', filename='img/profile.png')}}" alt="">
@@ -118,7 +146,7 @@
             </div> -->
         </section>
 
-        <section>
+        <section id="contact-section">
             <div class="client-header">
                 <h2>Get in touch</h2>
             </div>
@@ -174,5 +202,12 @@
             </div>
         </section>
     </div>
+
+    <footer>
+        <div class="copyright">
+            <span>Copyright &copy; 2021 Ruthexconsult.com. All Rights Reserved.</span><br>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
 </body>
 </html>
